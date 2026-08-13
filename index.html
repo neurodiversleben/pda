@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PDA verstehen – Kostenloser Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #201C2E;
+    background: #F8F5EF;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 28px; }
+  a { color: inherit; }
+
+  /* HERO */
+  .hero {
+    background: #5B2FC9;
+    color: white;
+    padding: 60px 0 70px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero .circle1 { position: absolute; top: -80px; right: -100px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .hero .circle2 { position: absolute; bottom: -160px; left: -100px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.06); }
+  .hero .wrap { position: relative; z-index: 2; }
+  .logo { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 17px; margin-bottom: 46px; }
+  .logo span { color: #CFFF3D; }
+  .eyebrow {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #CFFF3D;
+    margin-bottom: 16px;
+  }
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 1.08;
+    margin-bottom: 20px;
+    max-width: 520px;
+  }
+  .hero-sub {
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 26px;
+    max-width: 480px;
+    color: #E8E3F7;
+  }
+  .hero-lead {
+    font-size: 15.5px;
+    line-height: 1.7;
+    color: #D8CFF2;
+    max-width: 460px;
+    margin-bottom: 38px;
+  }
+
+  /* FORM (see scoped MailerLite override styles inline near the widget) */
+  .signup-note {
+    font-size: 12.5px;
+    color: #C7BDE8;
+    margin-top: 12px;
+    line-height: 1.5;
+    max-width: 460px;
+  }
+
+  /* SECTIONS */
+  section { padding: 56px 0; }
+  .eyebrow-purple {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5B2FC9;
+    margin-bottom: 10px;
+  }
+  .eyebrow-line { width: 40px; height: 3px; background: #CFFF3D; margin-bottom: 22px; border-radius: 2px; }
+  h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 1.2;
+    color: #141018;
+    margin-bottom: 20px;
+    max-width: 520px;
+  }
+  p { font-size: 16px; line-height: 1.7; color: #332E40; margin-bottom: 16px; max-width: 560px; }
+
+  .checklist { list-style: none; margin: 24px 0 0; }
+  .checklist li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 14px;
+    font-size: 15.5px;
+    line-height: 1.6;
+    color: #332E40;
+  }
+  .checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 6px;
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: #B7E23A;
+  }
+  .checklist li b { color: #141018; }
+
+  .catbox {
+    background: #EBE6F8;
+    border-radius: 16px;
+    padding: 26px 28px;
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    margin-top: 8px;
+  }
+  .catbox .paw { flex: 0 0 auto; width: 34px; height: 34px; color: #5B2FC9; opacity: 0.85; margin-top: 4px; }
+  .catbox-label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #5B2FC9;
+    margin-bottom: 8px;
+  }
+  .catbox p { color: #241C3F; font-size: 15px; margin-bottom: 0; max-width: none; }
+
+  .honest {
+    background: #FBF9F5;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .honest h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #141018;
+    margin-bottom: 6px;
+  }
+  .honest p { font-size: 14.5px; margin-bottom: 0; }
+
+  .band {
+    background: #211C33;
+    color: #E6E2F2;
+    padding: 50px 0;
+  }
+  .band .eyebrow-purple { color: #CFFF3D; }
+  .band h2 { color: white; }
+  .band p { color: #C7BDE8; }
+
+  footer {
+    padding: 34px 0 50px;
+    font-size: 13px;
+    color: #6B6478;
+    line-height: 1.6;
+  }
+  footer .logo-small { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 13px; color: #201C2E; margin-bottom: 10px; }
+  footer .logo-small span { color: #5B2FC9; }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 32px; }
+    .hero-sub { font-size: 17px; }
+    h2 { font-size: 23px; }
+    .hero { padding: 40px 0 50px; }
+    section { padding: 40px 0; }
+  }
+</style>
+<style id="nl-consent-style">
+  #nl-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:99999;max-width:520px;margin:0 auto;
+    background:#211C33;color:#F8F5EF;border:2px solid #CFFF3D;border-radius:16px;padding:20px 22px;
+    box-shadow:0 10px 40px rgba(0,0,0,.30);display:none;font-family:'Inter',sans-serif;}
+  #nl-consent.show{display:block;}
+  #nl-consent p{margin:0 0 14px;font-size:14px;line-height:1.55;color:#E6E2F2;}
+  #nl-consent a{color:#CFFF3D;text-decoration:underline;}
+  #nl-consent .nl-btns{display:flex;gap:10px;flex-wrap:wrap;}
+  #nl-consent button{flex:1 1 140px;cursor:pointer;font-family:'Poppins',sans-serif;font-weight:700;font-size:13.5px;
+    border-radius:10px;padding:11px 14px;border:2px solid #CFFF3D;}
+  #nl-consent .nl-accept{background:#5B2FC9;color:#fff;border-color:#5B2FC9;}
+  #nl-consent .nl-accept:hover{background:#4a25a3;}
+  #nl-consent .nl-decline{background:transparent;color:#F8F5EF;}
+  #nl-consent .nl-decline:hover{background:rgba(255,255,255,.08);}
+  #nl-consent button:focus-visible,#nl-consent a:focus-visible{outline:2px solid #CFFF3D;outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="circle1"></div><div class="circle2"></div>
+  <div class="wrap">
+    <div class="logo">neurodivers<span>leben</span></div>
+    <div class="eyebrow">Kostenloser Grundlagen-Guide</div>
+    <h1>PDA verstehen</h1>
+    <div class="hero-sub">Wenn dein Nervensystem auf Autonomie läuft.</div>
+    <div class="hero-lead">Keine Diagnose, keine Anleitung. Nur eine Landkarte für ein Muster,
+    das viele ihr Leben lang gespürt und nie benannt bekommen haben. Wenn du magst, schau's dir an.</div>
+
+    <style type="text/css">
+      #mlb2-44809331.ml-form-embedContainer { box-sizing: border-box; display: table; margin: 0; position: static; width: 100% !important; max-width: 460px; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper { background-color: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.16); border-radius: 16px; box-sizing: border-box; display: block !important; margin: 0; padding: 22px 24px; width: 100% !important; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody { padding: 0; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent { margin: 0 0 12px 0; width: 100%; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow { margin: 0; width: 100%; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input { background-color: #ffffff !important; color: #201C2E !important; border: none !important; border-radius: 10px !important; font-family: 'Inter', sans-serif; font-size: 15px !important; height: 46px; line-height: 21px !important; margin: 0; padding: 0 16px !important; width: 100% !important; box-sizing: border-box !important; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::placeholder { color: #8A84A0; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit { margin: 10px 0 0 0; float: left; width: 100%; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button { background-color: #CFFF3D !important; border: none !important; border-radius: 10px !important; color: #2B3B00 !important; cursor: pointer; font-family: 'Poppins', sans-serif !important; font-size: 14.5px !important; font-weight: 700 !important; height: 46px; padding: 0 !important; width: 100% !important; box-sizing: border-box !important; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover { background-color: #C0EE30 !important; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody { padding: 0; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody h4 { color: #CFFF3D; font-family: 'Poppins', sans-serif; font-size: 17px; font-weight: 700; margin: 0 0 6px 0; }
+      #mlb2-44809331.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody p { color: #E6E2F2; font-size: 14px; margin: 0; }
+      .ml-form-embedSubmitLoad { display: inline-block; width: 20px; height: 20px; }
+      .ml-form-embedSubmitLoad:after { content: " "; display: block; width: 11px; height: 11px; margin: 1px; border-radius: 50%; border: 4px solid #fff; border-color: #ffffff #ffffff #ffffff transparent; animation: ml-form-embedSubmitLoad 1.2s linear infinite; }
+      @keyframes ml-form-embedSubmitLoad { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    </style>
+    <div id="mlb2-44809331" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-44809331">
+      <div class="ml-form-align-default">
+        <div class="ml-form-embedWrapper embedForm">
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/2344410/forms/195711632781870187/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                <div class="ml-form-fieldRow ml-last-item">
+                  <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+                    <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="deine@email.de" autocomplete="email">
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="ml-submit" value="1">
+              <div class="ml-form-embedSubmit">
+                <button type="submit" class="primary">Guide schicken</button>
+                <button disabled="disabled" style="display:none" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+          <div class="ml-form-successBody row-success" style="display:none">
+            <div class="ml-form-successContent">
+              <h4>Angekommen.</h4>
+              <p>Der Guide ist unterwegs zu dir, schau gleich in dein Postfach.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="signup-note">Kein Spam, kein Countdown, kein "nur noch heute". Du bekommst den Guide
+    und ab und zu Post von mir. Abmelden geht jederzeit mit einem Klick, ohne Begründung.</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow-purple">Für wen das ist</div>
+    <div class="eyebrow-line"></div>
+    <h2>Vielleicht kennst du das</h2>
+    <p>Du merkst, dass du auf Anforderungen anders reagierst als die Leute um dich herum, und
+    keine der gängigen Erklärungen passt so richtig. Näheproblem, Sturheit, Angststörung,
+    Faulheit. Alles trifft ein Stück und keins den Kern.</p>
+    <p>Der Guide ist ein Angebot zum Draufschauen. Wenn du dich wiedererkennst, gut. Wenn nicht,
+    auch gut. Du musst mir nichts glauben, du darfst selber prüfen, ob es für dich was erklärt.</p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="eyebrow-purple">Was drin steht</div>
+    <div class="eyebrow-line"></div>
+    <h2>9 Seiten, ohne Fachchinesisch</h2>
+    <ul class="checklist">
+      <li><b>Was PDA ist, und was es nicht ist.</b> Keine Diagnose, kein Subtyp, sondern ein Muster.</li>
+      <li><b>Der Kern:</b> warum es um Autonomie geht, nicht um Faulheit.</li>
+      <li><b>Die Achsen:</b> sechs verschiedene Formen von Unfreiheit, an denen du dein eigenes Muster erkennst.</li>
+      <li><b>Vier Reaktionsformen,</b> von der leisen Unlust bis zur Panik.</li>
+      <li><b>Der ehrliche Forschungsstand,</b> sauber sortiert nach Sicherheit, ohne Übertreibung.</li>
+      <li><b>Ein erster Umgang,</b> drei kleine Verschiebungen für den Alltag.</li>
+    </ul>
+
+    <div class="catbox">
+      <svg class="paw" viewBox="0 0 100 100" fill="currentColor"><ellipse cx="50" cy="66" rx="27" ry="21"/><ellipse cx="19" cy="36" rx="12.5" ry="15.5" transform="rotate(-20 19 36)"/><ellipse cx="45" cy="19" rx="12" ry="15"/><ellipse cx="71" cy="21" rx="12" ry="14.5" transform="rotate(16 71 21)"/><ellipse cx="86" cy="41" rx="11" ry="14" transform="rotate(36 86 41)"/></svg>
+      <div>
+        <div class="catbox-label">Ein Vorgeschmack</div>
+        <p>Ruf eine Katze, und sie schaut dich an, dreht sich um, geht weg. Fünf Minuten später
+        springt dieselbe Katze von allein auf deinen Schoß. Nichts hat sich geändert, außer
+        einem: wessen Idee es war. Genauso fühlt sich ein PDA-Nervensystem oft an.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap">
+    <div class="eyebrow-purple">So läuft das hier ab</div>
+    <div class="eyebrow-line"></div>
+    <h2>Kurz gesagt</h2>
+    <div class="honest">
+      <h3>Der Guide kommt sofort</h3>
+      <p>Kein Vorbereitungskurs, bevor du das bekommst, wofür du eigentlich hier bist.</p>
+    </div>
+    <div class="honest">
+      <h3>Abmelden ohne Umwege</h3>
+      <p>Ein Klick im Footer der Mail, falls dich meine Infos und Produkte nicht interessieren.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="logo-small">neurodivers<span>leben</span></div>
+    <p style="max-width:560px">Dieser Guide dient der Aufklärung und Orientierung. Er ersetzt keine Diagnostik,
+    keine Therapie und keine individuelle Beratung. Wenn du dich wiedererkennst und das weiter
+    anschauen willst, ist eine Fachperson die richtige Adresse, die deine Geschichte kennt.</p>
+    <p style="margin-top:14px; margin-bottom:0">© neurodiversleben</p>
+  </div>
+</footer>
+
+<script>
+  function ml_webform_success_44809331() {
+    var $ = ml_jQuery || jQuery;
+    $('.ml-subscribe-form-44809331 .row-success').show();
+    $('.ml-subscribe-form-44809331 .row-form').hide();
+    if (window.__nlConsent === true && typeof fbq === 'function') {
+      fbq('track', 'Lead', { content_name: 'PDA-Guide' });
+    }
+  }
+</script>
+<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v83147fa8ce2d95cb73ece7f28b469519" type="text/javascript"></script>
+<script>fetch("https://assets.mailerlite.com/jsonp/2344410/forms/195711632781870187/takel")</script>
+
+<!-- ============ CONSENT BANNER + META PIXEL (gated) ============ -->
+<div id="nl-consent" role="dialog" aria-live="polite" aria-label="Cookie-Einwilligung">
+  <p>Ich nutze einen Marketing-Pixel (Meta), um zu sehen, ob meine Anzeigen funktionieren. Der lädt nur, wenn du zustimmst. Mehr dazu in der <a href="#datenschutz">Datenschutzerklärung</a>.</p>
+  <div class="nl-btns">
+    <button type="button" class="nl-accept" id="nl-accept">Akzeptieren</button>
+    <button type="button" class="nl-decline" id="nl-decline">Nur Notwendige</button>
+  </div>
+</div>
+<script>
+(function(){
+  var PIXEL_ID='1850603119282068', KEY='nl_pixel_consent', PRODUCT='PDA-Guide';
+  window.__nlConsent=false;
+  window.nlLoadPixel=function(){
+    if(window.fbq) return;
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', PIXEL_ID); fbq('track','PageView');
+    window.__nlConsent=true;
+  };
+  function hide(){var b=document.getElementById('nl-consent');if(b)b.classList.remove('show');}
+  function show(){var b=document.getElementById('nl-consent');if(b)b.classList.add('show');}
+  function grant(){try{localStorage.setItem(KEY,'granted');}catch(e){}hide();window.nlLoadPixel();}
+  function deny(){try{localStorage.setItem(KEY,'denied');}catch(e){}hide();}
+  var saved=null;try{saved=localStorage.getItem(KEY);}catch(e){}
+  if(saved==='granted'){window.nlLoadPixel();}
+  function init(){
+    var a=document.getElementById('nl-accept'),d=document.getElementById('nl-decline');
+    if(a)a.addEventListener('click',grant);
+    if(d)d.addEventListener('click',deny);
+    if(saved!=='granted'&&saved!=='denied')show();
+  }
+  if(document.readyState!=='loading')init();
+  else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+</body>
+</html>
